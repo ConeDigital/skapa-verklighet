@@ -20,4 +20,5 @@
     <div class="header">
         <img src="<?php echo esc_url(home_url( '/wp-content/themes/annatoresdotter/assets/images/atLogo.png' ) ); ?>">
         <?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_class' => '' ) ); ?>
+        hej hej hallå
     </div>
