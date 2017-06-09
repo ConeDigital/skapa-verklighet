@@ -15,26 +15,45 @@
         <h2><?php the_field('about-course-headline') ; ?></h2>
         <div class="about-course small-container">
             <div class="about-halfs">
-                <div class="about-half">
-                    <div class="about-check">
-                        <i class="material-icons">check</i>
-                        <p>Vill du få kontakt med ditt mod så du äntligen kan göra det du vill och inte måste?</p>
-                    </div>
-                    <div class="about-check">
-                        <i class="material-icons">check</i>
-                        <p>Är du trött på att sitta fast i ett ekorrhjul?</p>
-                    </div>
-                </div>
-                <div class="about-half">
-                    <div class="about-check">
-                        <i class="material-icons">check</i>
-                        <p>Känner du att din kreativitet inte får plats i vardagen och att du vet att den behöver komma till uttryck?</p>
-                    </div>
-                    <div class="about-check">
-                        <i class="material-icons">check</i>
-                        <p> Vill du veta vad du egentligen vill?</p>
-                    </div>
-                </div>
+            <?php if( have_rows('about-course-check') ): ?>
+                <?php
+                $key = 0;
+                $count = 0;
+                $html = '';
+                ?>
+                <?php while( have_rows('about-course-check') ) : the_row();?>
+                    <?php
+                    //$check = get_sub_field('course-check');
+
+                    if($count == 0){
+                        if( $key == 0 ){
+                            $col1 = '<div class="about-half">';
+
+                        }
+                        $col1 .= '<div class="about-check"><i class="material-icons">check</i><p>'. get_sub_field('course-check') .'</p></div>';
+                        $count++;
+                        $key++;
+                        continue;
+                    }
+                    if($count == 1){
+                        if( $key == 1 ){
+                            $col2 = '<div class="about-half">';
+                        }
+                        $col2 .= '<div class="about-check"><i class="material-icons">check</i><p>'. get_sub_field('course-check') .'</p></div>';
+                        $count = 0;
+                        $key++;
+                        continue;
+                    }
+                    ?>
+                <?php endwhile; ?>
+            <?php endif;
+            $col1 .= '</div>';
+            $col2 .= '</div>';
+
+            $html = $col1 . $col2;
+            echo ($html);
+            ?>
+
             </div>
             <?php the_field('about-course-content') ; ?>
         </div>
@@ -73,7 +92,7 @@
             </div>
         </div>
     </section>
-    <section class="new-section background-img image-section" style="background-image: url('<?php echo esc_url(home_url( '/wp-content/themes/skapa-verklighet/assets/images/yinyoga.png')); ?>')">
+    <section class="new-section background-img image-section" style="background-image: url('<?php the_field('yoga-img') ; ?>')">
         <div class="small-container">
             <h3><?php the_field('yoga-headline') ; ?></h3>
             <?php the_field('yoga-content') ; ?>
