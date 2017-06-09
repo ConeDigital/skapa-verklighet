@@ -12,6 +12,11 @@
   align-items: center;
   justify-content: center;
 
+
+  @include breakpoint(tablet) {
+    padding-top: 140px;
+  }
+
   p{
     color: #A3A3A3;
     font-size: 15px;
@@ -33,13 +38,18 @@
 }
 
 .video-box{
-  height: 336px;
+  height: 360px;
   width: calc(100% - 12px);
-  max-width: 608px;
+  max-width: 640px;
   border: 6px solid #FFFFFF;
   border-radius: 5px;
   box-shadow: 5px 20px 50px 0 rgba(0,0,0,0.2);
   margin: 68px auto 78px auto;
+
+  @include breakpoint(tablet) {
+    margin: 40px auto 58px auto;
+    height: 53.02vw;
+  }
 
   iframe{
     width: 100%;
@@ -54,13 +64,25 @@
   justify-content: space-between;
   margin: 60px 0;
 
+  @include breakpoint(small) {
+    flex-direction: column;
+  }
+
   .about-half:first-child{
     margin-right: 50px;
+
+    @include breakpoint(small) {
+      margin-right: 0;
+    }
   }
 }
 
 .about-half{
   width: 50%;
+
+  @include breakpoint(small) {
+    width: 100%;
+  }
 
   p{
     font-size: 20px;
@@ -91,6 +113,10 @@
   box-shadow: 5px 20px 50px 0 rgba(0,0,0,0.2);
   margin: 74px 0 60px 0;
 
+  @include breakpoint(tablet) {
+    margin: 50px 0 60px 0;
+  }
+
   h6{
     color: #000000;
     font-size: 32px;
@@ -102,6 +128,13 @@
     color: #656565;
     margin: 36px 0 47px 0;
     max-width: 384px;
+
+    @include breakpoint(tablet) {
+      max-width: 100%;
+    }
+    @include breakpoint(mobile) {
+      margin: 18px 0 30px;
+    }
   }
 
   .swiper-slide{
@@ -110,12 +143,25 @@
     align-items: center;
     width: calc(100% - 150px) !important;
     padding: 75px 65px 75px 85px;
+
+    @include breakpoint(medium) {
+      width: calc(100% - 80px)!important;
+      padding: 60px 40px;
+    }
+    @include breakpoint(mobile) {
+      width: calc(100% - 40px)!important;
+      padding: 40px 20px;
+    }
   }
 
   .swiper-pagination{
     display: flex;
     justify-content: center;
     bottom: 35px;
+
+    @include breakpoint(mobile) {
+      bottom: 15px;
+    }
   }
   .swiper-pagination-bullet-active{
     background: $primary-color;
@@ -144,12 +190,16 @@
   min-height: 200px;
   border-radius: 100px;
   margin-left: 20px;
+
+  @include breakpoint(tablet) {
+    display: none;
+  }
 }
 
 /*------------------ IMAGE SECTION  ---------------------*/
 
 .image-section{
-  padding: 60px 30px;
+  padding: 60px 0;
   min-height: 60vw;
   display: flex;
   align-items: center;
@@ -170,12 +220,22 @@
 .bio-half{
   display: flex;
   margin-top: 60px;
+
+  @include breakpoint(tablet) {
+    flex-direction: column-reverse;
+    align-items: center;
+    padding-bottom: 90px;
+  }
 }
 
 .bio-left{
   width: 277px;
   min-width: 277px;
   margin-right: 48px;
+
+  @include breakpoint(tablet) {
+    margin-right: 0;
+  }
 
 }
 
@@ -212,6 +272,10 @@
 .bio-right{
   padding-bottom: 120px;
 
+  @include breakpoint(tablet) {
+    padding-bottom: 40px;
+  }
+
   p:first-child{
     margin-top: 0;
     font-weight: bold;
@@ -224,16 +288,29 @@
 .courses{
   display: flex;
   flex-wrap: wrap;
-  max-width: 1190px;
-  left: 20px;
+  max-width: 1160px;
   position: relative;
   width: 100%;
   padding: 90px 0 120px 0;
+
+  @include breakpoint(tablet) {
+    padding: 50px 0 90px 0;
+  }
 }
 
 .course{
-  width: calc(25% - 40px);
-  margin: 0 40px 50px 0;
+  width: calc(25% - 30px);
+  margin: 0 15px 50px 15px;
+
+  @include breakpoint(laptop) {
+    width: calc(33.3% - 30px);
+  }
+  @include breakpoint(tablet) {
+    width: calc(50% - 30px);
+  }
+  @include breakpoint(mobile) {
+    width: calc(100% - 30px);
+  }
 
   h6{
     color: #000000;
@@ -275,6 +352,7 @@
     font-size: 48px;
     line-height: 58px;
     margin: 42px 0;
+    text-align: center;
   }
 }
 

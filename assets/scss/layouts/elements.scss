@@ -10,12 +10,18 @@ h2, h3, h4, h5{
 }
 
 h1{
-  color: #4A4A4A;
+  color: #9B9B9B;
   font-size: 70px;
   line-height: 84px;
   margin: 0;
-  font-family: $hensa;
+  font-family: $neuz;
   text-align: center;
+  background: -webkit-linear-gradient(left, #66c0df , #de638a);
+  background: -o-linear-gradient(right, #66c0df, #de638a);
+  background: -moz-linear-gradient(right, #66c0df, #de638a);
+  background: linear-gradient(to right, #66c0df , #de638a);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 h2{
@@ -23,6 +29,14 @@ h2{
   font-size: 64px;
   line-height: 64px;
   position: relative;
+
+  @include breakpoint(tablet) {
+    font-size: 52px;
+  }
+  @include breakpoint(mobile) {
+    font-size: 38px;
+    line-height: 48px;
+  }
 }
 
 h3{
@@ -90,26 +104,37 @@ p{
   background-color: $primary-color;
   box-shadow: 2px 5px 20px 0 rgba(230,41,94,0.4);
   margin: 0 auto;
+  text-align: center;
+
+  @include breakpoint(small) {
+    padding: 20px 40px;
+    font-size: 20px;
+  }
 }
 
 .new-section{
-  padding: 120px 30px 0 30px;
+  padding: 120px 0 0 0;
 
 
   @include breakpoint(tablet) {
-    padding: 90px 15px 0 15px;
+    padding: 90px 0 0 0;
   }
 
   h2{
     text-align: center;
     position: relative;
     margin: 0;
+    padding: 0 30px;
+
+    @include breakpoint(tablet) {
+      padding: 0 15px;
+    }
 
     &:after{
       content: '';
       background: rgba(76,193,252,.5);
       position: absolute;
-      width: 100%;
+      width: calc(100% - 60px);
       height: 16px;
       left: 0;
       max-width: 1035px;
@@ -117,6 +142,14 @@ p{
       margin: 0 auto;
       top: 28px;
       z-index: -1;
+
+      @include breakpoint(tablet) {
+        width: calc(100% - 30px);
+      }
+
+      @include breakpoint(mobile) {
+        top: 16px;
+      }
     }
   }
 }
