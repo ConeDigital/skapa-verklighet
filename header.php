@@ -58,7 +58,7 @@
                 <a class="absolute-link" href="<?php echo esc_url(home_url()); ?>"></a>
             <?php endif ; ?>
         </div>
-        <div>
+        <div class="header-right">
             <?php if( rcp_is_active() ) : ?>
                 <?php wp_nav_menu( array( 'theme_location' => 'secondary', 'menu_class' => 'member-menu' ) ); ?>
             <?php endif ; ?>
@@ -66,4 +66,14 @@
                 <?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_class' => '' ) ); ?>
             <?php endif ; ?>
         </div>
+        <i class="open-menu material-icons">menu</i>
     </header>
+    <div class="mobile-menu">
+        <i class="close-menu material-icons">close</i>
+        <?php if( rcp_is_active() ) : ?>
+            <?php wp_nav_menu( array( 'theme_location' => 'secondary', 'menu_class' => 'member-menu' ) ); ?>
+        <?php endif ; ?>
+        <?php if( ! rcp_is_active() ) : ?>
+            <?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_class' => '' ) ); ?>
+        <?php endif ; ?>
+    </div>

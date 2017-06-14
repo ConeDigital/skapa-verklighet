@@ -20,6 +20,13 @@ jQuery(document).ready( function($) {
         //loop: true
     });
 
+    //Open menu
+    $('.open-menu').on('click', function(){
+        $(".mobile-menu").fadeIn('fast');
+    });
+    $('.close-menu').on('click', function(){
+        $(".mobile-menu").fadeOut('fast');
+    });
 
     ////Open and close modal
     //$('.register-link').on('click', function(e){
