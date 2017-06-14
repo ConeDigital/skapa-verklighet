@@ -1502,9 +1502,12 @@ footer {
     width: calc(100% - 16px);
     max-width: 360px;
     outline: none; }
+  .register-section .rcp_login_link {
+    display: none; }
   .register-section .rcp_login_data a {
     color: rgba(76, 193, 252, 0.5); }
   .register-section td, .register-section th {
-    padding: 5px; }
+    padding: 5px;
+    text-align: left; }
   .register-section .rcp_form input[type=text]:focus, .register-section .rcp_form input[type=password]:focus, .register-section .rcp_form input[type=email]:focus {
     border: 1px solid #eee; }

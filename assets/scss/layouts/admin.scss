@@ -198,6 +198,10 @@
     outline: none;
   }
 
+  .rcp_login_link{
+    display: none;
+  }
+
   .rcp_login_data{
     a{
       color: $secondary-color;
@@ -205,6 +209,7 @@
   }
   td, th{
     padding: 5px;
+    text-align: left;
   }
   .rcp_form input[type=text]:focus, .rcp_form input[type=password]:focus, .rcp_form input[type=email]:focus {
     border: 1px solid #eee;
