@@ -6,9 +6,9 @@
             <h1><?php the_title() ; ?></h1>
             <p><?php the_content() ; ?></p>
             <div class="video-box">
-                <iframe src="https://player.vimeo.com/video/77308630?color=ffffff" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+                <iframe src="<?php the_field('intro-video') ; ?>" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
             </div>
-            <a href="#" class="color-button">Registrera dig för gratis lektion</a>
+            <a href="<?php echo esc_url(home_url('/registrera')); ?>" class="color-button register-link">Registrera dig för gratis lektion</a>
         </div>
     </section>
     <section class="about-section new-section">
@@ -58,7 +58,7 @@
             <?php the_field('about-course-content') ; ?>
         </div>
         <div class="small-container color-link">
-            <a href="#">Skriv upp dig & få del 1 av kursen helt gratis</a>
+            <a href="<?php echo esc_url(home_url('/registrera')); ?>" class="register-link">Skriv upp dig & få del 1 av kursen helt gratis</a>
         </div>
     </section>
     <section class="new-section review-section">
@@ -88,7 +88,7 @@
                 <div class="swiper-pagination"></div>
             </div>
             <div class="review-link">
-                <a href="#" class="color-button">Registrera dig för gratis lektion</a>
+                <a href="<?php echo esc_url(home_url('/registrera')); ?>" class="color-button register-link">Registrera dig för gratis lektion</a>
             </div>
         </div>
     </section>
@@ -137,7 +137,7 @@
         <div class="dark-content container">
             <h1><?php the_title() ; ?></h1>
             <p>Det kan bara bli bättre</p>
-            <a href="#" class="border-link">Gå med nu!</a>
+            <a href="<?php echo esc_url(home_url('/registrera')); ?>" class="border-link register-link">Gå med nu!</a>
         </div>
     </section>
 

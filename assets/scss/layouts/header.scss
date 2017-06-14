@@ -13,26 +13,57 @@ header{
     width: auto;
   }
 
-  a{
-    color: #4A4A4A;
-    font-size: 16px;
-    text-decoration: none;
-    border: 1px solid #000000;
-    border-radius: 100px;
-    padding: 16px 32px;
-    transition: 0.2s ease-in-out;
-    font-weight: bold;
-
-    &:hover{
-      background: $primary-color;
-      color: white;
-      border: 1px solid $primary-color;
-    }
-  }
-
   ul{
     list-style: none;
+    display: flex;
+
+    a{
+      color: #4A4A4A;
+      font-size: 16px;
+      text-decoration: none;
+      padding: 16px 32px;
+      transition: 0.2s ease-in-out;
+      font-weight: bold;
+      border: none;
+
+      &:hover{
+        color: $primary-color;
+      }
+    }
+    li:last-child{
+      a{
+        border: 1px solid #000000;
+        border-radius: 100px;
+
+        &:hover{
+          background: $primary-color;
+          color: white;
+          border: 1px solid $primary-color;
+        }
+      }
+    }
   }
+  .member-menu{
+    a{
+      padding: 16px 0 16px 42px;
+    }
+    li:last-child{
+      a{
+        border: none;
+        border-radius: 0;
+
+        &:hover{
+          color: $primary-color;
+          background: none;
+          border: none;
+        }
+      }
+    }
+  }
+}
+
+.header-logo{
+  position: relative;
 }
 
 footer{
