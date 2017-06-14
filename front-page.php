@@ -122,15 +122,15 @@
     <section class="new-section courses-section">
         <h2><?php the_field('course-headline') ; ?></h2>
         <div class="courses large-container">
-            <?php if( have_rows('courses') ): ?>
-                <?php while( have_rows('courses') ) : the_row();?>
-                    <div class="course">
-                        <h6><?php the_sub_field('course-title') ; ?></h6>
-                        <p><?php the_sub_field('course-content') ; ?></p>
-                        <span><?php the_sub_field('course-time') ; ?> minuter</span>
-                    </div>
-                <?php endwhile; ?>
-            <?php endif; ?>
+            <?php $loop = new WP_Query( array( 'post_type' => 'course', 'posts_per_page' => -1, 'order' => 'ASC') ); ?>
+            <?php while ( $loop->have_posts() ) : $loop->the_post(); ?>
+                <div class="course">
+                    <h6><?php the_title() ; ?></h6>
+                    <p><?php the_content() ; ?></p>
+                    <span><?php the_field('course-length') ; ?> minuter</span>
+                </div>
+            <?php endwhile; ?>
+            <?php wp_reset_query(); ?>
         </div>
     </section>
     <section class="dark-section new-section">
