@@ -159,4 +159,13 @@ footer{
     line-height: 22px;
     margin: 0;
   }
+
+  span{
+    font-size: 11px;
+    color: #9b9b9b;
+
+    a{
+      color: $secondary-color;
+    }
+  }
 }

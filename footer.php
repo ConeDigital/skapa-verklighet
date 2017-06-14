@@ -8,7 +8,10 @@
     <footer>
         <div class="large-container footer">
             <img src="<?php echo esc_url(home_url( '/wp-content/themes/skapa-verklighet/assets/images/logo-white.png' ) ); ?>">
-            <p>© 2017, av Annette Forslund</p>
+            <div>
+                <p>© 2017, av Annette Forslund</p>
+                <span>webbplats skapad av <a href="https://cone.digital/">Cone Digital</a></span>
+            </div>
         </div>
     </footer>
     <?php wp_footer(); ?>

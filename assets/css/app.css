@@ -908,6 +908,11 @@ footer {
     font-size: 18px;
     line-height: 22px;
     margin: 0; }
+  .footer span {
+    font-size: 11px;
+    color: #9b9b9b; }
+    .footer span a {
+      color: rgba(76, 193, 252, 0.5); }
 
 .hero {
   display: -webkit-box;
