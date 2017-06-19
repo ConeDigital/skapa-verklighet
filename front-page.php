@@ -1,12 +1,22 @@
 <?php get_header() ; ?>
 
+    <div id="exitpopup_bg">
+        <div id="exitpopup">
+            <h3>Innan du går! Få en gratis lektion.</h3>
+            <p>Skriv in din mail så får du min första lektion helt gratis</p>
+            <div class="exitpopup-inputs">
+                <input placeholder="Din Email adress">
+                <button>Skicka in</button>
+            </div>
+        </div>
+    </div>
     <section class="hero">
         <div class="background-img hero-background" style="background-image: url('<?php the_post_thumbnail_url() ; ?>')"></div>
         <div class="hero-content container">
             <h1><?php the_title() ; ?></h1>
             <p><?php the_content() ; ?></p>
             <div class="video-box">
-                <iframe src="<?php the_field('intro-video') ; ?>" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+                <iframe src="https://player.vimeo.com/video/<?php the_field('intro-video') ; ?>" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
             </div>
             <a href="<?php echo esc_url(home_url('/registrera')); ?>" class="color-button register-link">Registrera dig för gratis lektion</a>
         </div>

@@ -755,6 +755,65 @@ p {
   top: 0;
   z-index: 1; }
 
+/*-----------------------EXIT POPUP---------------------------*/
+#exitpopup_bg {
+  display: none;
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  background: rgba(0, 0, 0, 0.9);
+  opacity: 0;
+  z-index: 100;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-transition: opacity 0.3s ease-in-out;
+  transition: opacity 0.3s ease-in-out; }
+
+#exitpopup {
+  width: -webkit-calc(100% - 30px);
+  width: calc(100% - 30px);
+  max-width: 640px;
+  height: auto;
+  margin: 0 auto;
+  color: #ffffff;
+  z-index: 999999;
+  background: transparent;
+  position: relative;
+  padding: 0 15px;
+  display: none; }
+  #exitpopup h3 {
+    color: white;
+    font-size: 34px;
+    margin: 0; }
+  #exitpopup p {
+    color: white;
+    margin: 15px 0 30px;
+    font-size: 20px; }
+
+.exitpopup-inputs {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex; }
+  .exitpopup-inputs input {
+    width: 100%;
+    padding: 10px;
+    margin-right: 15px;
+    border: none;
+    color: #9B9B9B; }
+  .exitpopup-inputs button {
+    min-width: 163px;
+    background: #E6295E;
+    color: white;
+    border: none;
+    font-weight: bold; }
+
 header {
   display: -webkit-box;
   display: -webkit-flex;
