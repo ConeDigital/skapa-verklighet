@@ -16,7 +16,7 @@
             <h1><?php the_title() ; ?></h1>
             <p><?php the_content() ; ?></p>
             <div class="video-box">
-                <iframe src="https://player.vimeo.com/video/<?php the_field('intro-video') ; ?>" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+                <iframe src="https://player.vimeo.com/video/<?php the_field('intro-video') ; ?>?autoplay=1" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
             </div>
             <a href="<?php echo esc_url(home_url('/registrera')); ?>" class="color-button register-link">Registrera dig för gratis lektion</a>
         </div>
