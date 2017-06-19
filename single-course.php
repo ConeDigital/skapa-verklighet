@@ -3,7 +3,7 @@
 
     <section class="single-section">
         <div class="large-container single-video">
-            <iframe src="<?php the_field('course-video') ; ?>" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+            <iframe src="https://player.vimeo.com/video/<?php the_field('course-video') ; ?>" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
             <div class="single-pagination">
                 <?php $prev_post = get_previous_post(); ?>
                 <?php $next_post = get_next_post(); ?>
