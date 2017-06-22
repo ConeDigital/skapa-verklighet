@@ -3,7 +3,7 @@
 <?php if( rcp_is_active() ) : ?>
 
     <section class="container start-top">
-        <h2>Välkommen <?php echo do_shortcode('[user_name]') ; ?>,</h2>
+        <h2>Hej <?php echo do_shortcode('[user_name]') ; ?>,</h2>
         <?php the_content() ; ?>
     </section>
     <section class="list-section">

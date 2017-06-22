@@ -215,3 +215,57 @@
     border: 1px solid #eee;
   }
 }
+
+/*-------------NEW MEMBER STYLING---------------*/
+
+.new-member-section{
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.new-member-content{
+  text-align: center;
+
+  h2{
+    color: #737373;
+    font-size: 80px;
+    font-weight: bold;
+    margin: 0 0 38px;
+    line-height: 101px;
+
+    @include breakpoint(laptop) {
+      font-size: 60px;
+    }
+    @include breakpoint(tablet) {
+      line-height: 60px;
+    }
+    @include breakpoint(small) {
+      font-size: 40px;
+      line-height: 40px;
+    }
+  }
+
+  p{
+    max-width: 734px;
+    color: #4A4A4A;
+    font-size: 20px;
+    line-height: 26px;
+    margin: 0;
+
+    a{
+      color: $secondary-color;
+      text-decoration: none;
+    }
+  }
+  .color-button{
+    POSITION: RELATIVE;
+    top: 79px;
+
+    @include breakpoint(mobile) {
+      padding: 15px 25px;
+      font-size: 15px;
+    }
+  }
+}
