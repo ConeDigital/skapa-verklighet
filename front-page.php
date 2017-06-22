@@ -1,12 +1,14 @@
 <?php get_header() ; ?>
 
     <div id="exitpopup_bg">
+        <i class="material-icons close-popup">close</i>
         <div id="exitpopup">
             <h3>Innan du går! Få en gratis lektion.</h3>
             <p>Skriv in din mail så får du min första lektion helt gratis</p>
             <div class="exitpopup-inputs">
-                <input placeholder="Din Email adress">
-                <button>Skicka in</button>
+<!--                <input placeholder="Din Email adress">-->
+<!--                <button>Skicka in</button>-->
+                <?php echo do_shortcode('[activecampaign form=5]') ; ?>
             </div>
         </div>
     </div>

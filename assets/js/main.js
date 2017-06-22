@@ -57,12 +57,12 @@ jQuery(document).ready( function($) {
                 // Show the exit popup
                 $('#exitpopup_bg').css({"display": "flex", "opacity": "1"});
                 $('#exitpopup').fadeIn('slow');
-                $('#exitpopup input').focus();
+                //$('#exitpopup input').focus();
             }
         });
 
         //Close Popup on click outside
-        $(document).on('blur','#exitpopup', function() {
+        $(document).on('click','.close-popup', function() {
             $('#exitpopup_bg').fadeOut();
             $('#exitpopup').fadeOut();
             setTimeout(function(){

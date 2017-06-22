@@ -388,6 +388,16 @@ p{
   align-items: center;
   justify-content: center;
   transition: opacity 0.3s ease-in-out;
+
+  i{
+    position: fixed;
+    top: 60px;
+    right: 60px;
+    color: white;
+    z-index: 3;
+    font-size: 34px;
+    cursor: pointer;
+  }
 }
 
 #exitpopup{
@@ -420,7 +430,7 @@ p{
   input{
     width: 100%;
     padding: 10px;
-    margin-right: 15px;
+    //margin-right: 15px;
     border: none;
     color: #9B9B9B;
   }
@@ -430,5 +440,19 @@ p{
     color: white;
     border: none;
     font-weight: bold;
+    height: 36px;
+  }
+}
+
+._form_5{
+  width: calc(100% - 10px);
+  max-width: 450px ;
+
+  div{
+    text-align: left;
+  }
+
+  ._form_element{
+    margin-bottom: 16px;
   }
 }

@@ -774,6 +774,14 @@ p {
           justify-content: center;
   -webkit-transition: opacity 0.3s ease-in-out;
   transition: opacity 0.3s ease-in-out; }
+  #exitpopup_bg i {
+    position: fixed;
+    top: 60px;
+    right: 60px;
+    color: white;
+    z-index: 3;
+    font-size: 34px;
+    cursor: pointer; }
 
 #exitpopup {
   width: -webkit-calc(100% - 30px);
@@ -804,7 +812,6 @@ p {
   .exitpopup-inputs input {
     width: 100%;
     padding: 10px;
-    margin-right: 15px;
     border: none;
     color: #9B9B9B; }
   .exitpopup-inputs button {
@@ -812,7 +819,17 @@ p {
     background: #E6295E;
     color: white;
     border: none;
-    font-weight: bold; }
+    font-weight: bold;
+    height: 36px; }
+
+._form_5 {
+  width: -webkit-calc(100% - 10px);
+  width: calc(100% - 10px);
+  max-width: 450px; }
+  ._form_5 div {
+    text-align: left; }
+  ._form_5 ._form_element {
+    margin-bottom: 16px; }
 
 header {
   display: -webkit-box;
