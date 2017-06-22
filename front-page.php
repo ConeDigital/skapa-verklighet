@@ -3,8 +3,8 @@
     <div id="exitpopup_bg">
         <i class="material-icons close-popup">close</i>
         <div id="exitpopup">
-            <h3>Innan du går! Få en gratis lektion.</h3>
-            <p>Skriv in din mail så får du min första lektion helt gratis</p>
+            <h3>Vill du sluta oroa dig? Göra din grej & leva ditt liv?</h3>
+            <p>Fyll i dina uppgifter nedan här för att få tre konkreta tips på hur mailat till dig</p>
             <div class="exitpopup-inputs">
 <!--                <input placeholder="Din Email adress">-->
 <!--                <button>Skicka in</button>-->
