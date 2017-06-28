@@ -390,7 +390,7 @@ h1 {
   font-size: 70px;
   line-height: 84px;
   margin: 0;
-  font-family: "Neuzeit Grotesk", sans-serif;
+  font-family: "merriweather", sans-serif;
   text-align: center;
   background: -webkit-linear-gradient(left, #66c0df, #de638a);
   background: -webkit-gradient(linear, left top, right top, from(#66c0df), to(#de638a));
