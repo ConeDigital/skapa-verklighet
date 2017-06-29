@@ -20,7 +20,7 @@
             <div class="video-box">
                 <iframe src="https://player.vimeo.com/video/<?php the_field('intro-video') ; ?>?autoplay=1" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
             </div>
-            <a href="<?php echo esc_url(home_url('/registrera')); ?>" class="color-button register-link">Registrera dig</a>
+            <?php echo do_shortcode('[activecampaign form=7]') ; ?>
         </div>
     </section>
     <section class="about-section new-section">

@@ -57,6 +57,76 @@
   }
 }
 
+._form_7{
+  width: 100%;
+  max-width: 640px;
+
+  ._form-content{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 2px 5px 20px 0 rgba(0,0,0,.4);
+    border-radius: 100px;
+
+    @include breakpoint(small) {
+      border-radius: 0;
+      box-shadow: none;
+      flex-direction: column;
+    }
+  }
+
+  ._form_element{
+    width: 100%;
+  }
+
+  ._form-label{
+    display: none;
+  }
+
+  input{
+    width: calc(100% - 50px);
+    font-size: 21px;
+    padding: 26px 25px;
+    border: none;
+    border-bottom-left-radius: 100px;
+    border-top-left-radius: 100px;
+    outline: none;
+
+    @include breakpoint(small) {
+     border-radius: 100px;
+      box-shadow: 2px 5px 20px 0 rgba(0,0,0,.4);
+      padding: 18px 25px;
+    }
+
+  }
+
+  ._button-wrapper{
+
+    @include breakpoint(small) {
+      width: 100%;
+    }
+  }
+
+  ._submit{
+    color: #FFF;
+    font-size: 24px;
+    padding: 24px 52px;
+    background-color: #E6295E;
+    border: none;
+    border-bottom-right-radius: 100px;
+    border-top-right-radius: 100px;
+    outline: none;
+
+    @include breakpoint(small) {
+      border-radius: 100px;
+      box-shadow: 2px 5px 20px 0 rgba(230,41,94,.4);
+      padding: 18px 25px;
+      width: 100%;
+      margin-top: 25px;
+    }
+  }
+}
+
 /*------------------ ABOUT SECTION  ---------------------*/
 
 .about-halfs{
