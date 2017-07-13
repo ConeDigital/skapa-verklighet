@@ -1,17 +1,16 @@
 <?php get_header() ; ?>
 
-    <div id="exitpopup_bg">
-        <i class="material-icons close-popup">close</i>
-        <div id="exitpopup">
-            <h3>Vill du sluta oroa dig? Göra din grej & leva ditt liv?</h3>
-            <p>Fyll i dina uppgifter nedan här för att få tre konkreta tips på hur mailat till dig</p>
-            <div class="exitpopup-inputs">
-<!--                <input placeholder="Din Email adress">-->
-<!--                <button>Skicka in</button>-->
-                <?php echo do_shortcode('[activecampaign form=5]') ; ?>
-            </div>
-        </div>
-    </div>
+<!--    <div id="exitpopup_bg">-->
+<!--        <i class="material-icons close-popup">close</i>-->
+<!--        <div id="exitpopup">-->
+<!--            <h3>Vill du sluta oroa dig? Göra din grej & leva ditt liv?</h3>-->
+<!--            <p>Fyll i dina uppgifter nedan här för att få tre konkreta tips på hur mailat till dig</p>-->
+<!--            <div class="exitpopup-inputs">-->
+<!--<!--
+<!--                --><?php //echo do_shortcode('[activecampaign form=5]') ; ?>
+<!--            </div>-->
+<!--        </div>-->
+<!--    </div>-->
     <section class="hero">
         <div class="background-img hero-background" style="background-image: url('<?php the_post_thumbnail_url() ; ?>')"></div>
         <div class="hero-content container">
