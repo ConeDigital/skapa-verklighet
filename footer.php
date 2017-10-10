@@ -15,7 +15,7 @@
         </div>
     </footer>
     <?php wp_footer(); ?>
-    <script src=“https://use.typekit.net/otw4nwc.js“></script>
-    <script>try{Typekit.load({ async: true });}catch(e){}</script>
+<script src="https://use.typekit.net/pek3ryc.js"></script>
+<script>try{Typekit.load({ async: true });}catch(e){}</script>
 </body>
 </html>
