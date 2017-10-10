@@ -380,7 +380,7 @@ body {
   margin: 0;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  font-family: "Neuzeit Grotesk", sans-serif; }
+  font-family: "neuzeit-grotesk", sans-serif; }
 
 h2, h3, h4, h5 {
   font-family: "merriweather", sans-serif; }
@@ -615,7 +615,7 @@ p {
     font-size: 20px;
     font-weight: 600;
     line-height: 27px;
-    font-family: "Neuzeit Grotesk", sans-serif;
+    font-family: "neuzeit-grotesk", sans-serif;
     text-transform: uppercase;
     margin: 20px 0;
     text-align: center; }
@@ -624,7 +624,7 @@ p {
     font-size: 20px;
     line-height: 24px;
     text-align: center;
-    font-family: "Neuzeit Grotesk", sans-serif;
+    font-family: "neuzeit-grotesk", sans-serif;
     margin: 0; }
 
 .modal-left {
@@ -1483,7 +1483,7 @@ footer {
       padding-bottom: 50px; } }
   .start-top h2 {
     color: rgba(76, 193, 252, 0.5);
-    font-family: "Neuzeit Grotesk", sans-serif;
+    font-family: "neuzeit-grotesk", sans-serif;
     font-size: 30px;
     line-height: 49px;
     margin: 0;
@@ -1518,7 +1518,7 @@ footer {
       padding: 50px 0 120px 0; } }
   .list-content h3 {
     color: #4A4A4A;
-    font-family: "Neuzeit Grotesk", sans-serif;
+    font-family: "neuzeit-grotesk", sans-serif;
     font-size: 24px;
     margin: 0;
     line-height: 29px;
