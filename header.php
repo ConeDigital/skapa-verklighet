@@ -17,7 +17,7 @@
 
     <?php wp_head(); ?>
 </head>
-<body>
+<body <?php body_class(); ?>>
 <!--    <div class="modal-wrapper" style="display: none">-->
 <!--        <div class="modal-content container">-->
 <!--            <i class="material-icons modal-close">highlight_off</i>-->
@@ -50,7 +50,8 @@
 <!--    </div>-->
     <header class="large-container">
         <div class="header-logo">
-            <img src="<?php echo esc_url(home_url( '/wp-content/themes/skapa-verklighet/assets/images/af-logo.png' ) ); ?>">
+            <img class="dark-logo" src="<?php echo esc_url(home_url( '/wp-content/themes/skapa-verklighet/assets/images/af-logo.png' ) ); ?>">
+            <img class="light-logo" src="<?php echo esc_url(home_url( '/wp-content/themes/skapa-verklighet/assets/images/af-vit.svg' ) ); ?>">
             <?php if(  rcp_is_active() ) : ?>
                 <a class="absolute-link" href="<?php echo esc_url(home_url('/valkommen')); ?>"></a>
             <?php endif ; ?>

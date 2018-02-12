@@ -11,107 +11,176 @@
 <!--            </div>-->
 <!--        </div>-->
 <!--    </div>-->
-    <section class="hero">
-        <div class="background-img hero-background" style="background-image: url('<?php the_post_thumbnail_url() ; ?>')"></div>
-        <div class="hero-content container">
+
+    <section class="hero background-img" style="background-image: url('<?php the_post_thumbnail_url() ; ?>')">
+        <div class="hero-headlines small-container">
             <h1><?php the_title() ; ?></h1>
             <p><?php the_content() ; ?></p>
+        </div>
+        <div class="background-overlay"></div>
+    </section>
+    <section class="video-section large-container">
+        <div class="video-wrapper">
             <div class="video-box">
                 <iframe src="https://player.vimeo.com/video/<?php the_field('intro-video') ; ?>?autoplay=1" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
             </div>
-            <?php echo do_shortcode('[activecampaign form=7]') ; ?>
+            <div class="about-section">
+                <h2><?php the_field('about-course-headline') ; ?></h2>
+                <div class="about-course">
+                    <div class="about-halfs">
+                        <?php if( have_rows('about-course-check') ): ?>
+                            <?php
+                            $key = 0;
+                            $count = 0;
+                            $html = '';
+                            ?>
+                            <?php while( have_rows('about-course-check') ) : the_row();?>
+                                <?php
+                                //$check = get_sub_field('course-check');
+
+                                if($count == 0){
+                                    if( $key == 0 ){
+                                        $col1 = '<div class="about-half">';
+
+                                    }
+                                    $col1 .= '<div class="about-check"><i class="material-icons">check</i><p>'. get_sub_field('course-check') .'</p></div>';
+                                    $count++;
+                                    $key++;
+                                    continue;
+                                }
+                                if($count == 1){
+                                    if( $key == 1 ){
+                                        $col2 = '<div class="about-half">';
+                                    }
+                                    $col2 .= '<div class="about-check"><i class="material-icons">check</i><p>'. get_sub_field('course-check') .'</p></div>';
+                                    $count = 0;
+                                    $key++;
+                                    continue;
+                                }
+                                ?>
+                            <?php endwhile; ?>
+                        <?php endif;
+                        $col1 .= '</div>';
+                        $col2 .= '</div>';
+
+                        $html = $col1 . $col2;
+                        echo ($html);
+                        ?>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="video-inputs">
+            <div class="video-input">
+                <a href="<?php echo esc_url(home_url('/registrera')); ?>" class="video-input-link">Vill du öka din likvskvalité, registrera dig nu</a>
+            </div>
+            <div class="video-input">
+                <?php echo do_shortcode('[activecampaign form=7]') ; ?>
+            </div>
+
         </div>
     </section>
-    <section class="about-section new-section">
-        <h2><?php the_field('about-course-headline') ; ?></h2>
-        <div class="about-course small-container">
-            <div class="about-halfs">
-            <?php if( have_rows('about-course-check') ): ?>
-                <?php
-                $key = 0;
-                $count = 0;
-                $html = '';
-                ?>
-                <?php while( have_rows('about-course-check') ) : the_row();?>
-                    <?php
-                    //$check = get_sub_field('course-check');
 
+    <section class="new-section review-section">
+        <h2><?php the_field('reviews-headline') ; ?></h2>
+        <div class="large-container reviews-content">
+            <div class="review-cards">
+                <?php
+
+                $cards = get_field('reviews');
+                $count = 0;
+
+                foreach ($cards as $key => $card) {
                     if($count == 0){
                         if( $key == 0 ){
-                            $col1 = '<div class="about-half">';
-
+                            $col1 = '<div class="review-col">';
                         }
-                        $col1 .= '<div class="about-check"><i class="material-icons">check</i><p>'. get_sub_field('course-check') .'</p></div>';
+                        $col1 .= '<div class="review-card">
+                                    <div class="review-right background-img" style="background-image: url('. $card['reviews-img'] .')"></div>
+                                        <h6>'. $card['reviews-name'] .'</h6>
+                                        <p>'. $card['reviews-content'] .'</p>
+                                        <div class="stars">
+                                            <i class="material-icons">star_rate</i>
+                                            <i class="material-icons">star_rate</i>
+                                            <i class="material-icons">star_rate</i>
+                                            <i class="material-icons">star_rate</i>
+                                            <i class="material-icons">star_rate</i>
+                                        </div>
+                                  </div>';
                         $count++;
-                        $key++;
                         continue;
                     }
                     if($count == 1){
                         if( $key == 1 ){
-                            $col2 = '<div class="about-half">';
+                            $col2 = '<div class="review-col">';
                         }
-                        $col2 .= '<div class="about-check"><i class="material-icons">check</i><p>'. get_sub_field('course-check') .'</p></div>';
-                        $count = 0;
-                        $key++;
+                        $col2 .= '<div class="review-card">
+                                    <div class="review-right background-img" style="background-image: url('. $card['reviews-img'] .')"></div>
+                                        <h6>'. $card['reviews-name'] .'</h6>
+                                        <p>'. $card['reviews-content'] .'</p>
+                                        <div class="stars">
+                                            <i class="material-icons">star_rate</i>
+                                            <i class="material-icons">star_rate</i>
+                                            <i class="material-icons">star_rate</i>
+                                            <i class="material-icons">star_rate</i>
+                                            <i class="material-icons">star_rate</i>
+                                        </div>
+                                  </div>';
+                        $count++;
                         continue;
                     }
-                    ?>
-                <?php endwhile; ?>
-            <?php endif;
-            $col1 .= '</div>';
-            $col2 .= '</div>';
+                    if($count == 2){
+                        if( $key == 2 ){
+                            $col3 = '<div class="review-col">';
+                        }
+                        $col3 .= '<div class="review-card">
+                                    <div class="review-right background-img" style="background-image: url('. $card['reviews-img'] .')"></div>
+                                        <h6>'. $card['reviews-name'] .'</h6>
+                                        <p>'. $card['reviews-content'] .'</p>
+                                        <div class="stars">
+                                            <i class="material-icons">star_rate</i>
+                                            <i class="material-icons">star_rate</i>
+                                            <i class="material-icons">star_rate</i>
+                                            <i class="material-icons">star_rate</i>
+                                            <i class="material-icons">star_rate</i>
+                                        </div>
+                                  </div>';
+                        $count = 0;
+                        continue;
+                    }
+                }
 
-            $html = $col1 . $col2;
-            echo ($html);
-            ?>
+                $col1 .= '</div>';
+                $col2 .= '</div>';
+                $col3 .= '</div>';
 
-            </div>
-            <?php the_field('about-course-content') ; ?>
-        </div>
-        <div class="small-container color-link">
-            <a href="<?php echo esc_url(home_url('/registrera')); ?>" class="register-link">Vill du öka din likvskvalité, registrera dig nu</a>
-        </div>
-    </section>
-    <section class="new-section review-section">
-        <h2><?php the_field('reviews-headline') ; ?></h2>
-        <div class="small-container ">
-            <div class="swiper-container review-swiper">
-                <div class="swiper-wrapper">
-                <?php if( have_rows('reviews') ): ?>
-                    <?php while( have_rows('reviews') ) : the_row();?>
-                        <div class="swiper-slide">
-                            <div class="review-left">
-                                <h6><?php the_sub_field('reviews-name') ; ?></h6>
-                                <p><?php the_sub_field('reviews-content') ; ?></p>
-                                <div class="stars">
-                                    <i class="material-icons">star_rate</i>
-                                    <i class="material-icons">star_rate</i>
-                                    <i class="material-icons">star_rate</i>
-                                    <i class="material-icons">star_rate</i>
-                                    <i class="material-icons">star_rate</i>
-                                </div>
-                            </div>
-                            <div class="review-right background-img" style="background-image: url('<?php the_sub_field('reviews-img') ; ?>')"></div>
-                        </div>
-                    <?php endwhile; ?>
-                <?php endif; ?>
-                </div>
-                <div class="swiper-pagination"></div>
+                $html = $col1 . $col2 . $col3;
+                echo $html
+
+                ?>
             </div>
             <div class="review-link">
                 <a href="<?php echo esc_url(home_url('/registrera')); ?>" class="color-button register-link">Registrera dig</a>
             </div>
+        </div>
+        <div class="small-container">
+            <?php the_field('about-course-content') ; ?>
         </div>
     </section>
     <section class="new-section background-img image-section" style="background-image: url('<?php the_field('yoga-img') ; ?>')">
         <div class="small-container">
             <h3><?php the_field('yoga-headline') ; ?></h3>
             <?php the_field('yoga-content') ; ?>
+
+            <div class="review-link">
+                <a href="<?php echo esc_url(home_url('/registrera')); ?>" class="color-button register-link">Registrera dig</a>
+            </div>
         </div>
     </section>
     <section class="bio-section new-section">
         <h2><?php the_field('bio-headline') ; ?></h2>
-        <div class="small-container">
+        <div class="small-container bio-container">
             <div class="bio-half">
                 <div class="bio-left">
                     <div class="bio-left-content">
@@ -128,6 +197,9 @@
                     <?php the_field('bio-content') ; ?>
                 </div>
             </div>
+            <div class="review-link">
+                <a href="<?php echo esc_url(home_url('/registrera')); ?>" class="color-button register-link">Registrera dig</a>
+            </div>
         </div>
     </section>
     <section class="new-section courses-section">
@@ -142,6 +214,9 @@
                 </div>
             <?php endwhile; ?>
             <?php wp_reset_query(); ?>
+        </div>
+        <div class="review-link">
+            <a href="<?php echo esc_url(home_url('/registrera')); ?>" class="color-button register-link">Registrera dig</a>
         </div>
     </section>
     <section class="dark-section new-section">

@@ -43,13 +43,16 @@ header{
       }
     }
   }
+  .light-logo{
+    display: none;
+  }
   .member-menu{
     a{
       padding: 16px 0 16px 42px;
     }
     li:last-child{
       a{
-        border: none;
+        border: none !important;
         border-radius: 0;
 
         &:hover{
@@ -57,6 +60,29 @@ header{
           background: none;
           border: none;
         }
+      }
+    }
+  }
+}
+
+.home{
+
+  .light-logo{
+    display: block;
+  }
+
+  .dark-logo{
+    display: none;
+  }
+
+  header{
+
+    a{
+      color: white;
+    }
+    li:last-child{
+      a{
+        border: 1px solid #fff;
       }
     }
   }
@@ -134,6 +160,14 @@ header{
     &:hover{
       opacity: 0.8;
     }
+  }
+}
+
+.page-id-85{
+  background: #f8f8f8;
+
+  @include breakpoint(laptop) {
+    background: white;
   }
 }
 

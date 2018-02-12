@@ -3,9 +3,11 @@
 .start-top{
   padding-top: 130px;
   padding-bottom: 90px;
+  display: flex;
 
   @include breakpoint(laptop) {
     padding-bottom: 50px;
+    flex-direction: column;
   }
 
   h2{
@@ -31,10 +33,15 @@
   }
 }
 
+.list-left{
+  margin-right: 45px;
+}
+
 .list-wrapper{
   background-color: #FFFFFF;
   border: 1px solid #EEEEEE;
   box-shadow: 0 10px 40px 0 rgba(0,0,0,0.1);
+  min-width: 50%;
 
   @include breakpoint(laptop) {
     box-shadow: none;

@@ -2,12 +2,12 @@
 
 <?php if( rcp_is_active() ) : ?>
 
-    <section class="container start-top">
-        <h2>Hej <?php echo do_shortcode('[user_name]') ; ?>,</h2>
-        <?php the_content() ; ?>
-    </section>
-    <section class="list-section">
-        <div class="list-wrapper container">
+    <section class="large-container start-top">
+        <div class="list-left">
+            <h2>Hej <?php echo do_shortcode('[user_name]') ; ?>,</h2>
+            <?php the_content() ; ?>
+        </div>
+        <div class="list-wrapper">
             <div class="list-content">
                 <h3>Avsnitt</h3>
                 <div class="list">
