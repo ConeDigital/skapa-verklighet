@@ -73,7 +73,7 @@
         </div>
         <div class="video-inputs">
             <div class="video-input">
-                <a href="<?php echo esc_url(home_url('/registrera')); ?>" class="video-input-link">Vill du öka din likvskvalité, registrera dig nu</a>
+                <a href="<?php echo esc_url(home_url('/registrera')); ?>" class="video-input-link">Vill du känna mer glädje, passion & mod? Registrera dig</a>
             </div>
             <div class="video-input">
                 <?php echo do_shortcode('[activecampaign form=7]') ; ?>
@@ -220,10 +220,10 @@
         </div>
     </section>
     <section class="dark-section new-section">
-        <div class="dark-content container">
-            <h1><?php the_title() ; ?></h1>
-            <p>Det kan bara bli bättre</p>
-            <a href="<?php echo esc_url(home_url('/registrera')); ?>" class="border-link register-link">Gå med nu!</a>
+        <h2><?php the_title() ; ?></h2>
+         <p>Få mer tillgång till ditt mod, glädje och skaparkraft.</p>
+        <div class="review-link">
+            <a href="<?php echo esc_url(home_url('/registrera')); ?>" class="color-button register-link">Gå med nu</a>
         </div>
     </section>
 

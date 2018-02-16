@@ -31,8 +31,8 @@ h1{
 
 h2{
   color: #2A2A2A;
-  font-size: 64px;
-  line-height: 64px;
+  font-size: 73px;
+  line-height: 1;
   position: relative;
 
   @include breakpoint(tablet) {
@@ -150,6 +150,7 @@ a{
     position: relative;
     margin: 0;
     padding: 0 30px;
+    font-family: $neuz;
 
     @include breakpoint(tablet) {
       padding: 0 15px;
@@ -165,7 +166,7 @@ a{
       max-width: 1035px;
       right: 0;
       margin: 0 auto;
-      top: 28px;
+      top: 35px;
       z-index: -1;
 
       @include breakpoint(tablet) {
