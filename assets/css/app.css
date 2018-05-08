@@ -519,26 +519,6 @@ a {
     @media (max-width: 700px) {
       .new-section h2 {
         padding: 0 15px; } }
-    .new-section h2:after {
-      content: '';
-      background: rgba(76, 193, 252, 0.5);
-      position: absolute;
-      width: -webkit-calc(100% - 60px);
-      width: calc(100% - 60px);
-      height: 16px;
-      left: 0;
-      max-width: 1035px;
-      right: 0;
-      margin: 0 auto;
-      top: 35px;
-      z-index: -1; }
-      @media (max-width: 700px) {
-        .new-section h2:after {
-          width: -webkit-calc(100% - 30px);
-          width: calc(100% - 30px); } }
-      @media (max-width: 500px) {
-        .new-section h2:after {
-          top: 16px; } }
 
 .color-link {
   margin-top: 60px; }

@@ -156,27 +156,27 @@ a{
       padding: 0 15px;
     }
 
-    &:after{
-      content: '';
-      background: rgba(76,193,252,.5);
-      position: absolute;
-      width: calc(100% - 60px);
-      height: 16px;
-      left: 0;
-      max-width: 1035px;
-      right: 0;
-      margin: 0 auto;
-      top: 35px;
-      z-index: -1;
-
-      @include breakpoint(tablet) {
-        width: calc(100% - 30px);
-      }
-
-      @include breakpoint(mobile) {
-        top: 16px;
-      }
-    }
+    //&:after{
+    //  content: '';
+    //  background: rgba(76,193,252,.5);
+    //  position: absolute;
+    //  width: calc(100% - 60px);
+    //  height: 16px;
+    //  left: 0;
+    //  max-width: 1035px;
+    //  right: 0;
+    //  margin: 0 auto;
+    //  top: 35px;
+    //  z-index: -1;
+    //
+    //  @include breakpoint(tablet) {
+    //    width: calc(100% - 30px);
+    //  }
+    //
+    //  @include breakpoint(mobile) {
+    //    top: 16px;
+    //  }
+    //}
   }
 }
 
