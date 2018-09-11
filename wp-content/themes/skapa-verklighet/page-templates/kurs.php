@@ -23,7 +23,7 @@ $pageTitle = get_the_title();
                     <?php while ( $loop->have_posts() ) : $loop->the_post(); ?>
                         <div class="list-grid">
                             <a href="<?php the_permalink() ; ?>" class="absolute-link"></a>
-                            <p><i class="material-icons">play_circle_filled</i> <?php the_title() ; ?></p>
+                            <p><i style="color: <?php the_field('episode-color') ?>;" class="material-icons">play_circle_filled</i> <?php the_title() ; ?></p>
                             <span><?php the_field('course-length') ; ?> min</span>
                         </div>
                     <?php endwhile; ?>

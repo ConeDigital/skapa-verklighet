@@ -30,9 +30,11 @@
                     <a class="absolute-link" href="<?php echo esc_url(home_url()); ?>"></a>
                 <?php endif ; ?>
             </div>
-            <div class="cd-header-middle">
-                <?php wp_nav_menu( array( 'theme_location' => 'footer', 'menu_class' => '' ) ); ?>
-            </div>
+            <?php if( ! rcp_is_active() ) : ?>
+                <div class="cd-header-middle">
+                    <?php wp_nav_menu( array( 'theme_location' => 'footer', 'menu_class' => '' ) ); ?>
+                </div>
+            <?php endif ; ?>
         </div>
 
         <div class="header-right">

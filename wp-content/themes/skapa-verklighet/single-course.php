@@ -6,12 +6,12 @@
             <div class="single-pagination">
                 <?php $prev_post = get_previous_post(); ?>
                 <?php $next_post = get_next_post(); ?>
-                <a href="<?php echo get_permalink( $prev_post->ID ); ?>">
+                <a style="color: <?php the_field('episode-color') ?>;" href="<?php echo get_permalink( $prev_post->ID ); ?>">
                     <?php if (!empty( $prev_post )):
                         previous_post_link( 'Föregående Avsnitt' );
                     endif; ?>
                 </a>
-                <a href="<?php echo get_permalink( $next_post->ID ); ?>">
+                <a style="color: <?php the_field('episode-color') ?>;" href="<?php echo get_permalink( $next_post->ID ); ?>">
                     <?php if (!empty( $next_post )):
                         next_post_link( 'Nästa Avsnitt' );
                     endif; ?>

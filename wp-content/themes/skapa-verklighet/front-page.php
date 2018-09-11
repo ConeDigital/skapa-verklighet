@@ -20,6 +20,9 @@
                     <?php while ( $loop->have_posts() ) : $loop->the_post(); ?>
                         <div class="cd-home-courses-card <?php if(get_field('course-disabled')) : ?> cd-home-courses-card-disabled <?php endif ; ?>">
                             <div class="cd-home-courses-card-top background-img" style="background-image: url('<?php the_post_thumbnail_url() ; ?>')">
+                                <?php if(!get_field('course-disabled')) : ?>
+                                    <a href="<?php the_permalink() ; ?>"></a>
+                                <?php endif ; ?>
                                 <div class="background-overlay" style="background: <?php the_field('course-gradient') ; ?>;"></div>
                                 <span><?php the_field('about-course-headline') ; ?></span>
                                 <h4><?php the_title() ; ?></h4>
@@ -69,7 +72,9 @@
                     <span><?php the_field('about-course-headline') ; ?></span>
                     <h4><?php the_title() ; ?></h4>
                     <p>Läs mer</p>
-                    <a href="<?php the_permalink() ; ?>"></a>
+                    <?php if(!get_field('course-disabled')) : ?>
+                        <a href="<?php the_permalink() ; ?>"></a>
+                    <?php endif ; ?>
                 </div>
             <?php endwhile; ?>
         <?php endif; ?>

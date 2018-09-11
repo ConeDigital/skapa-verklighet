@@ -22,6 +22,12 @@
     font-family: $neuz;
     margin: 0 0 15px;
     text-align: left;
+
+    @include breakpoint(tablet) {
+      font-size: 32px;
+      font-weight: bold;
+      line-height: 47px;
+    }
   }
   h2{
     color: #CACACA;
@@ -176,6 +182,7 @@
     width: 100%;
     height: 100%;
     top:0;
+    padding: 0;
     left: 0;
     z-index: 2;
     background: transparent !important;

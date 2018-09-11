@@ -71,7 +71,7 @@ get_header() ; ?>
                 </div>
             </div>
             <div class="review-link">
-                <a href="#" class="cd-background-link">Registrera dig</a>
+                <a href="<?php echo esc_url(home_url('/registrera')); ?>" class="cd-background-link">Registrera dig</a>
             </div>
         </div>
     </section>
