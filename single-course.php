@@ -1,6 +1,5 @@
 <?php get_header() ; ?>
-<?php if( rcp_is_active() ) : ?>
-
+<?php if( rcp_user_can_access( get_current_user_id(), get_the_ID() ) ) : ?>
     <section class="single-section">
         <div class="large-container single-video">
             <iframe src="https://player.vimeo.com/video/<?php the_field('course-video') ; ?>" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
@@ -37,7 +36,10 @@
         </div>
     </section>
 
-<?php endif; ?>
+<?php endif;
+
+    if ( get_the_title() === rcp_get_subscription( get_current_user_id() ) )
+?>
 
 
 <?php get_footer() ; ?>

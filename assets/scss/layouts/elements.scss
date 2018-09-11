@@ -10,45 +10,42 @@ h2, h3, h4, h5{
 }
 
 h1{
-  color: #9B9B9B;
-  font-size: 70px;
-  line-height: 84px;
-  margin: 0;
-  font-family: $merri;
-  text-align: center;
-  background: -webkit-linear-gradient(left, #66c0df , #de638a);
-  background: -o-linear-gradient(right, #66c0df, #de638a);
-  background: -moz-linear-gradient(right, #66c0df, #de638a);
-  background: linear-gradient(to right, #66c0df , #de638a);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-
-  @include breakpoint(tablet) {
-    font-size: 55px;
-    line-height: 62px;
-  }
+  color: #2A2A2A;
+  font-size: 42px;
+  font-weight: bold;
+  line-height: 57px;
+  font-family: $neuz;
+  margin: 0 0 15px;
+  text-align: left;
 }
 
 h2{
-  color: #2A2A2A;
-  font-size: 73px;
-  line-height: 1;
-  position: relative;
+  color: #000000;
+  font-family: $neuz;
+  font-size: 42px;
+  font-weight: bold;
+  line-height: 57px;
+  margin: 0 0 30px;
 
   @include breakpoint(tablet) {
-    font-size: 52px;
-  }
-  @include breakpoint(mobile) {
-    font-size: 38px;
-    line-height: 48px;
+    font-size: 32px;
+    font-weight: bold;
+    line-height: 42px;
   }
 }
 
 h3{
-  color: #404144;
-  font-size: 30px;
-  line-height: 49px;
-  margin: 20px 0;
+  color: #000000;
+  font-family: $neuz;
+  font-size: 42px;
+  font-weight: bold;
+  line-height: 57px;
+  margin: 0 0 30px;
+
+  @include breakpoint(tablet) {
+    font-size: 32px;
+    line-height: 47px;
+  }
 }
 
 p{
@@ -103,6 +100,8 @@ a{
   position: absolute;
   width: 100%;
   height: 100%;
+  top:0;
+  left: 0;
 }
 
 .background-img{
@@ -148,7 +147,6 @@ a{
   h2{
     text-align: center;
     position: relative;
-    margin: 0;
     padding: 0 30px;
     font-family: $neuz;
 

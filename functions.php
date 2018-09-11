@@ -111,7 +111,7 @@ add_action( 'widgets_init', 'cone_widgets_init' );
  * @return int The filtered number of characters.
  */
 function cone_set_excerpt_length( $length ) {
-    return 40;
+    return 940;
 }
 add_filter( 'excerpt_length', 'cone_set_excerpt_length' );
 

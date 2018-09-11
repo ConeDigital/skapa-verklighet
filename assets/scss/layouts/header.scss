@@ -5,11 +5,11 @@ header{
   position: absolute;
   left: 0;
   right: 0;
-  top: 40px;
+  top: 20px;
   z-index: 10;
 
   img{
-    height: 39px;
+    height: 49px;
     width: auto;
   }
 
@@ -21,7 +21,7 @@ header{
       color: #4A4A4A;
       font-size: 16px;
       text-decoration: none;
-      padding: 16px 32px;
+      padding: 10px 20px;
       transition: 0.2s ease-in-out;
       font-weight: bold;
       border: none;
@@ -65,7 +65,32 @@ header{
   }
 }
 
-.home{
+.cd-header-left{
+  display: flex;
+  align-items: center;
+
+  ul{
+
+    @include breakpoint(laptop) {
+      display: none;
+    }
+
+    li:last-child{
+      a{
+        border: none !important;
+
+        &:hover{
+          background: transparent;
+          color: $primary-color;
+          border: none;
+        }
+      }
+    }
+  }
+
+}
+
+.home, .single-kurs{
 
   .light-logo{
     display: block;
@@ -89,14 +114,14 @@ header{
 }
 
 .header-right{
-  @include breakpoint(small) {
+  @include breakpoint(laptop) {
     display: none;
   }
 }
 
 .open-menu{
   display: none;
-  font-size: 35px;
+  font-size: 30px;
   cursor: pointer;
   opacity: 1;
   color: $secondary-color;
@@ -107,7 +132,7 @@ header{
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 
-  @include breakpoint(small) {
+  @include breakpoint(laptop) {
     display: block;
   }
 
@@ -129,10 +154,12 @@ header{
   background: linear-gradient(to right,#66c0df,#de638a);
   z-index: 50;
   display: none;
+  padding: 60px 15px;
+  box-sizing: border-box;
 
   ul{
-    padding: 100px 15px 0;
     list-style: none;
+    padding: 0;
 
     a{
       text-align: center;
@@ -143,7 +170,7 @@ header{
       color: white;
       text-decoration: none;
       font-weight: bold;
-      font-size: 47px;
+      font-size: 35px;
       margin-bottom: 20px;
     }
   }

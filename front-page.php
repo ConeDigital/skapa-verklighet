@@ -1,230 +1,79 @@
 <?php get_header() ; ?>
 
-<!--    <div id="exitpopup_bg">-->
-<!--        <i class="material-icons close-popup">close</i>-->
-<!--        <div id="exitpopup">-->
-<!--            <h3>Vill du sluta oroa dig? Göra din grej & leva ditt liv?</h3>-->
-<!--            <p>Fyll i dina uppgifter nedan här för att få tre konkreta tips på hur mailat till dig</p>-->
-<!--            <div class="exitpopup-inputs">-->
-<!--<!--
-<!--                --><?php //echo do_shortcode('[activecampaign form=5]') ; ?>
-<!--            </div>-->
-<!--        </div>-->
-<!--    </div>-->
-
-    <section class="hero background-img" style="background-image: url('<?php the_post_thumbnail_url() ; ?>')">
-        <div class="hero-headlines small-container">
-            <h1><?php the_title() ; ?></h1>
-            <p><?php the_content() ; ?></p>
-        </div>
+    <section class="cd-home-hero background-img" style="background-image: url('<?php the_post_thumbnail_url() ; ?>')">
         <div class="background-overlay"></div>
-    </section>
-    <section class="video-section large-container">
-        <div class="video-wrapper">
-            <div class="video-box">
-                <iframe src="https://player.vimeo.com/video/<?php the_field('intro-video') ; ?>?autoplay=1" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-            </div>
-            <div class="about-section">
-                <h2><?php the_field('about-course-headline') ; ?></h2>
-                <div class="about-course">
-                    <div class="about-halfs">
-                        <?php if( have_rows('about-course-check') ): ?>
-                            <?php
-                            $key = 0;
-                            $count = 0;
-                            $html = '';
-                            ?>
-                            <?php while( have_rows('about-course-check') ) : the_row();?>
-                                <?php
-                                //$check = get_sub_field('course-check');
-
-                                if($count == 0){
-                                    if( $key == 0 ){
-                                        $col1 = '<div class="about-half">';
-
-                                    }
-                                    $col1 .= '<div class="about-check"><i class="material-icons">check</i><p>'. get_sub_field('course-check') .'</p></div>';
-                                    $count++;
-                                    $key++;
-                                    continue;
-                                }
-                                if($count == 1){
-                                    if( $key == 1 ){
-                                        $col2 = '<div class="about-half">';
-                                    }
-                                    $col2 .= '<div class="about-check"><i class="material-icons">check</i><p>'. get_sub_field('course-check') .'</p></div>';
-                                    $count = 0;
-                                    $key++;
-                                    continue;
-                                }
-                                ?>
-                            <?php endwhile; ?>
-                        <?php endif;
-                        $col1 .= '</div>';
-                        $col2 .= '</div>';
-
-                        $html = $col1 . $col2;
-                        echo ($html);
-                        ?>
-
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="video-inputs">
-            <div class="video-input">
-                <a href="<?php echo esc_url(home_url('/registrera')); ?>" class="video-input-link">Vill du känna mer glädje, passion & mod? Registrera dig</a>
-            </div>
-            <div class="video-input">
-                <?php echo do_shortcode('[activecampaign form=7]') ; ?>
-            </div>
-
-        </div>
-    </section>
-
-    <section class="new-section review-section">
-        <h2><?php the_field('reviews-headline') ; ?></h2>
-        <div class="large-container reviews-content">
-            <div class="review-cards">
-                <?php
-
-                $cards = get_field('reviews');
-                $count = 0;
-
-                foreach ($cards as $key => $card) {
-                    if($count == 0){
-                        if( $key == 0 ){
-                            $col1 = '<div class="review-col">';
-                        }
-                        $col1 .= '<div class="review-card">
-                                    <div class="review-right background-img" style="background-image: url('. $card['reviews-img'] .')"></div>
-                                        <h6>'. $card['reviews-name'] .'</h6>
-                                        <p>'. $card['reviews-content'] .'</p>
-                                        <div class="stars">
-                                            <i class="material-icons">star_rate</i>
-                                            <i class="material-icons">star_rate</i>
-                                            <i class="material-icons">star_rate</i>
-                                            <i class="material-icons">star_rate</i>
-                                            <i class="material-icons">star_rate</i>
-                                        </div>
-                                  </div>';
-                        $count++;
-                        continue;
-                    }
-                    if($count == 1){
-                        if( $key == 1 ){
-                            $col2 = '<div class="review-col">';
-                        }
-                        $col2 .= '<div class="review-card">
-                                    <div class="review-right background-img" style="background-image: url('. $card['reviews-img'] .')"></div>
-                                        <h6>'. $card['reviews-name'] .'</h6>
-                                        <p>'. $card['reviews-content'] .'</p>
-                                        <div class="stars">
-                                            <i class="material-icons">star_rate</i>
-                                            <i class="material-icons">star_rate</i>
-                                            <i class="material-icons">star_rate</i>
-                                            <i class="material-icons">star_rate</i>
-                                            <i class="material-icons">star_rate</i>
-                                        </div>
-                                  </div>';
-                        $count++;
-                        continue;
-                    }
-                    if($count == 2){
-                        if( $key == 2 ){
-                            $col3 = '<div class="review-col">';
-                        }
-                        $col3 .= '<div class="review-card">
-                                    <div class="review-right background-img" style="background-image: url('. $card['reviews-img'] .')"></div>
-                                        <h6>'. $card['reviews-name'] .'</h6>
-                                        <p>'. $card['reviews-content'] .'</p>
-                                        <div class="stars">
-                                            <i class="material-icons">star_rate</i>
-                                            <i class="material-icons">star_rate</i>
-                                            <i class="material-icons">star_rate</i>
-                                            <i class="material-icons">star_rate</i>
-                                            <i class="material-icons">star_rate</i>
-                                        </div>
-                                  </div>';
-                        $count = 0;
-                        continue;
-                    }
-                }
-
-                $col1 .= '</div>';
-                $col2 .= '</div>';
-                $col3 .= '</div>';
-
-                $html = $col1 . $col2 . $col3;
-                echo $html
-
-                ?>
-            </div>
-            <div class="review-link">
-                <a href="<?php echo esc_url(home_url('/registrera')); ?>" class="color-button register-link">Registrera dig</a>
-            </div>
-        </div>
-        <div class="small-container">
-            <?php the_field('about-course-content') ; ?>
-        </div>
-    </section>
-    <section class="new-section background-img image-section" style="background-image: url('<?php the_field('yoga-img') ; ?>')">
-        <div class="small-container">
-            <h3><?php the_field('yoga-headline') ; ?></h3>
-            <?php the_field('yoga-content') ; ?>
-
-            <div class="review-link">
-                <a href="<?php echo esc_url(home_url('/registrera')); ?>" class="color-button register-link">Registrera dig</a>
+        <div class="large-container cd-home-hero-grid">
+            <iframe src="https://player.vimeo.com/video/<?php the_field('home-intro-video') ; ?>?autoplay=1" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+            <div class="cd-home-hero-content">
+                <h1><?php the_title() ; ?></h1>
+                <?php the_content() ; ?>
+                <a class="cd-background-link" href="#">Få ett avsnitt gratis</a>
             </div>
         </div>
     </section>
-    <section class="bio-section new-section">
-        <h2><?php the_field('bio-headline') ; ?></h2>
-        <div class="small-container bio-container">
-            <div class="bio-half">
-                <div class="bio-left">
-                    <div class="bio-left-content">
-                        <div class="bio-left-top background-img" style="background-image: url('<?php the_field('bio-img') ; ?>')">
-
+    <section class="cd-home-courses cd-home-section">
+        <div class="large-container">
+            <h3>Mina webbkurser</h3>
+            <div class="cd-home-courses-grid">
+                <?php $loop = new WP_Query( array( 'post_type' => 'kurs', 'posts_per_page' => 3)); ?>
+                <?php if ( $loop->have_posts() ) : ?>
+                    <?php while ( $loop->have_posts() ) : $loop->the_post(); ?>
+                        <div class="cd-home-courses-card <?php if(get_field('course-disabled')) : ?> cd-home-courses-card-disabled <?php endif ; ?>">
+                            <div class="cd-home-courses-card-top background-img" style="background-image: url('<?php the_post_thumbnail_url() ; ?>')">
+                                <div class="background-overlay" style="background: <?php the_field('course-gradient') ; ?>;"></div>
+                                <span><?php the_field('about-course-headline') ; ?></span>
+                                <h4><?php the_title() ; ?></h4>
+                                <div class="cd-comming-soon-tile">
+                                    <p>Kommer snart</p>
+                                </div>
+                            </div>
+                            <p><?php the_field('course-excerpt') ; ?></p>
+                            <a href="<?php if(!get_field('course-disabled')) : the_permalink() ; endif ; ?>" <?php if(get_field('course-disabled')) : ?> disabled <?php endif ; ?>>Läs mer</a>
                         </div>
-                        <div class="bio-left-bottom">
-                            <p>Annette Forslund</p>
-                            <span>Kursledare</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="bio-right">
-                    <?php the_field('bio-content') ; ?>
-                </div>
-            </div>
-            <div class="review-link">
-                <a href="<?php echo esc_url(home_url('/registrera')); ?>" class="color-button register-link">Registrera dig</a>
+                    <?php endwhile; ?>
+                <?php endif; ?>
+                <?php wp_reset_query(); ?>
             </div>
         </div>
     </section>
-    <section class="new-section courses-section">
-        <h2><?php the_field('course-headline') ; ?></h2>
-        <div class="courses large-container">
-            <?php $loop = new WP_Query( array( 'post_type' => 'course', 'posts_per_page' => -1, 'order' => 'ASC') ); ?>
+    <section class="cd-home-background-section cd-home-section background-img" style="background-image: url('<?php the_field('home-background-section-img') ; ?>')">
+        <div class="background-overlay"></div>
+        <div class="large-container">
+            <?php the_field('home-background-section-text') ; ?>
+        </div>
+    </section>
+    <section class="cd-home-about-section cd-home-section">
+        <div class="large-container cd-home-about-grid">
+            <div class="cd-home-about-left">
+                <div class="cd-home-about-img background-img" style="background-image: url('<?php the_field('home-about-section-img') ; ?>')"></div>
+                <div class="cd-home-about-info">
+                    <h4>Annette Forslund</h4>
+                    <span>Kursledare</span>
+                </div>
+            </div>
+            <div class="cd-home-about-right">
+                <?php the_field('home-about-section-text') ; ?>
+            </div>
+        </div>
+    </section>
+    <section class="cd-home-link-section cd-home-section">
+        <div class="large-container">
+            <a class="cd-background-link" href="#">Få ett avsnitt gratis</a>
+        </div>
+    </section>
+    <section class="cd-course-bottom-grid">
+        <?php $loop = new WP_Query( array( 'post_type' => 'kurs', 'posts_per_page' => 3)); ?>
+        <?php if ( $loop->have_posts() ) : ?>
             <?php while ( $loop->have_posts() ) : $loop->the_post(); ?>
-                <div class="course">
-                    <h6><?php the_title() ; ?></h6>
-                    <p><?php the_content() ; ?></p>
-                    <span><?php the_field('course-length') ; ?> minuter</span>
+                <div class="cd-course-bottom-card <?php if(get_field('course-disabled')) : ?> cd-course-bottom-card-disabled <?php endif ; ?>" style="background: <?php the_field('course-gradient') ; ?>">
+                    <span><?php the_field('about-course-headline') ; ?></span>
+                    <h4><?php the_title() ; ?></h4>
+                    <p>Läs mer</p>
+                    <a href="<?php the_permalink() ; ?>"></a>
                 </div>
             <?php endwhile; ?>
-            <?php wp_reset_query(); ?>
-        </div>
-        <div class="review-link">
-            <a href="<?php echo esc_url(home_url('/registrera')); ?>" class="color-button register-link">Registrera dig</a>
-        </div>
-    </section>
-    <section class="dark-section new-section">
-        <h2><?php the_title() ; ?></h2>
-         <p>Få mer tillgång till ditt mod, glädje och skaparkraft.</p>
-        <div class="review-link">
-            <a href="<?php echo esc_url(home_url('/registrera')); ?>" class="color-button register-link">Gå med nu</a>
-        </div>
+        <?php endif; ?>
+        <?php wp_reset_query(); ?>
     </section>
 
 <?php get_footer() ; ?>
