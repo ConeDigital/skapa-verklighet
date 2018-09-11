@@ -175,6 +175,7 @@ get_header() ; ?>
             </div>
         </div>
     </section>
+    <?php if(get_field('yoga-headline')) : ?>
     <section class="new-section background-img image-section" style="background-image: url('<?php the_field('yoga-img') ; ?>')">
         <div class="small-container">
             <h3><?php the_field('yoga-headline') ; ?></h3>
@@ -185,6 +186,7 @@ get_header() ; ?>
             </div>
         </div>
     </section>
+    <?php endif ; ?>
     <section class="new-section courses-section">
         <div class="large-container">
             <h2>Innehåll från kursen</h2>
