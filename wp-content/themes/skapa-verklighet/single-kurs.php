@@ -197,7 +197,7 @@ get_header() ; ?>
                 <div class="course">
                     <h6><?php the_title() ; ?></h6>
                     <p><?php echo get_post( get_the_ID() )->post_content; ?></p>
-                    <span><?php the_field('course-length') ; ?> minuter</span>
+                    <span style="color: <?php the_field('episode-color') ; ?>;"><?php the_field('course-length') ; ?> minuter</span>
                 </div>
             <?php endwhile; ?>
             <?php wp_reset_query(); ?>

@@ -915,12 +915,9 @@
 }
 
 .course{
-  width: calc(25% - 30px);
+  width: calc(33.3% - 30px);
   margin: 0 15px 50px 15px;
 
-  @include breakpoint(laptop) {
-    width: calc(33.3% - 30px);
-  }
   @include breakpoint(tablet) {
     width: calc(50% - 30px);
   }
@@ -945,7 +942,7 @@
     color: #9B9B9B;
     font-size: 16px;
     line-height: 19px;
-    border:1px solid #9B9B9B;
+    border:1px solid ;
     padding: 6px 5px;
   }
 }
