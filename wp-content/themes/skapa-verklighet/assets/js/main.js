@@ -28,14 +28,23 @@ jQuery(document).ready( function($) {
         $(".mobile-menu").fadeOut('fast');
     });
 
-    ////Open and close modal
-    //$('.register-link').on('click', function(e){
-    //    e.preventDefault();
-    //    $(".modal-wrapper").fadeIn('fast');
-    //});
-    //$('.modal-close').on('click', function(e){
-    //    $(".modal-wrapper").fadeOut('fast');
-    //});
+    //Open and close modal
+    $('.cd-free-lesson-link').on('click', function(e){
+        e.preventDefault();
+        $(".cd-free-episode-section").fadeIn('fast');
+    });
+    $('.cd-close-free-episode').on('click', function(e){
+        $(".cd-free-episode-section").fadeOut('fast');
+    });
+
+    //Fade out on click outside
+    $(document).mouseup(function(e){
+        var container = $(".cd-free-episode-modal");
+        // if the target of the click isn't the container nor a descendant of the container
+            if (!container.is(e.target) && container.has(e.target).length === 0){
+                $('.cd-free-episode-section').fadeOut('fast');
+            }
+    });
 
     ////Exit Popup code
     //var popUpDone = false;

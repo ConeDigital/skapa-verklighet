@@ -1,4 +1,15 @@
 <?php get_header() ; ?>
+    <div class="cd-free-episode-section">
+        <div class="cd-free-episode-content">
+            <div class="large-container">
+                <div class="cd-free-episode-modal">
+                    <i class="material-icons cd-close-free-episode">close</i>
+                    <h3>Skriv in din email för att få ett gratis avsnitt</h3>
+                    <?php echo do_shortcode('[activecampaign form=7]') ; ?>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <section class="cd-home-hero background-img" style="background-image: url('<?php the_post_thumbnail_url() ; ?>')">
         <div class="background-overlay"></div>
@@ -7,7 +18,7 @@
             <div class="cd-home-hero-content">
                 <h1><?php the_title() ; ?></h1>
                 <?php the_content() ; ?>
-                <a class="cd-background-link" href="#">Få ett avsnitt gratis</a>
+                <a class="cd-background-link cd-free-lesson-link" href="#">Få ett avsnitt gratis</a>
             </div>
         </div>
     </section>
@@ -61,7 +72,7 @@
     </section>
     <section class="cd-home-link-section cd-home-section">
         <div class="large-container">
-            <a class="cd-background-link" href="#">Få ett avsnitt gratis</a>
+            <a class="cd-background-link cd-free-lesson-link" href="#">Få ett avsnitt gratis</a>
         </div>
     </section>
     <section class="cd-course-bottom-grid">
