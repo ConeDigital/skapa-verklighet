@@ -2549,37 +2549,11 @@ footer {
       -ms-flex-align: center;
           align-items: center; }
 
-.new-member-content {
-  text-align: center; }
-  .new-member-content h2 {
-    color: #737373;
-    font-size: 80px;
-    font-weight: bold;
-    margin: 0 0 38px;
-    line-height: 101px; }
-    @media (max-width: 900px) {
-      .new-member-content h2 {
-        font-size: 60px; } }
-    @media (max-width: 700px) {
-      .new-member-content h2 {
-        line-height: 60px; } }
-    @media (max-width: 600px) {
-      .new-member-content h2 {
-        font-size: 40px;
-        line-height: 40px; } }
-  .new-member-content p {
-    max-width: 734px;
-    color: #4A4A4A;
-    font-size: 20px;
-    line-height: 26px;
-    margin: 0; }
-    .new-member-content p a {
-      color: rgba(76, 193, 252, 0.5);
-      text-decoration: none; }
-  .new-member-content .color-button {
-    POSITION: RELATIVE;
-    top: 79px; }
-    @media (max-width: 500px) {
-      .new-member-content .color-button {
-        padding: 15px 25px;
-        font-size: 15px; } }
+.new-member-content p {
+  max-width: 734px;
+  font-size: 20px;
+  line-height: 26px;
+  margin: 0; }
+  .new-member-content p a {
+    color: rgba(76, 193, 252, 0.5);
+    text-decoration: none; }

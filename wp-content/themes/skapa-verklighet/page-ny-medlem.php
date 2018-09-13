@@ -5,7 +5,7 @@
         <div class="new-member-content">
             <h2>Välkommen <?php echo do_shortcode('[user_name]') ; ?></h2>
             <p><?php the_content() ; ?></p>
-            <a class="color-button" href="<?php echo esc_url(home_url('/course/01-valkommen-pa-resan/')); ?>">Påbörja din resa nu med första lektionen!</a>
+            <a class="cd-background-link" href="<?php echo esc_url(home_url('/valkommen')); ?>">Gå till dina kurser!</a>
         </div>
     </section>
 
