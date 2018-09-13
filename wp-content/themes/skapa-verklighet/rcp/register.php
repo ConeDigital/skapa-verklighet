@@ -19,7 +19,7 @@ $discount = ! empty( $_REQUEST['discount'] ) ? sanitize_text_field( $_REQUEST['d
 ?>
 
 
-<form id="rcp_registration_form " class="rcp_form cd-register-form" method="POST" action="<?php echo esc_url( rcp_get_current_url() ); ?>">
+<form id="rcp_registration_form" class="rcp_form cd-register-form" method="POST" action="<?php echo esc_url( rcp_get_current_url() ); ?>">
 	<div class="cd-register-left">
 		<?php if( ! is_user_logged_in() ) { ?>
 
@@ -100,9 +100,11 @@ $discount = ! empty( $_REQUEST['discount'] ) ? sanitize_text_field( $_REQUEST['d
 				<?php endif; ?>
 			</fieldset>
 			<?php do_action( 'rcp_after_register_form_fields', $levels ); ?>
+			<?php do_action( 'rcp_before_registration_submit_field', $levels ); ?>
+
 			<div id="rcp_submit_wrap">
 				<input type="hidden" name="rcp_register_nonce" value="<?php echo wp_create_nonce('rcp-register-nonce' ); ?>"/>
-				<input type="submit" name="rcp_submit_registration" id="rcp_submit" value="<?php esc_attr_e( apply_filters ( 'rcp_registration_register_button', __( 'Register', 'rcp' ) ) ); ?>"/>
+				<input type="submit" name="rcp_submit_registration" id="rcp_submit"  value="<?php esc_attr_e( apply_filters ( 'rcp_registration_register_button', __( 'Register', 'rcp' ) ) ); ?>"/>
 			</div>
 		</div>
 		<div class="rcp_gateway_fields">
@@ -137,7 +139,6 @@ $discount = ! empty( $_REQUEST['discount'] ) ? sanitize_text_field( $_REQUEST['d
 			<?php endif; ?>
 		</div>
 
-		<?php do_action( 'rcp_before_registration_submit_field', $levels ); ?>
 	</div>
 	<div class="cd-register-right">
 		<?php if( rcp_has_discounts() ) : ?>
@@ -175,6 +176,4 @@ $discount = ! empty( $_REQUEST['discount'] ) ? sanitize_text_field( $_REQUEST['d
 			</div>
 		</div>
 	</div>
-
-
 </form>
