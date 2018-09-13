@@ -99,14 +99,12 @@ $discount = ! empty( $_REQUEST['discount'] ) ? sanitize_text_field( $_REQUEST['d
 					<p><strong><?php _e( 'You have not created any subscription levels yet', 'rcp' ); ?></strong></p>
 				<?php endif; ?>
 			</fieldset>
+			<?php do_action( 'rcp_after_register_form_fields', $levels ); ?>
 			<div id="rcp_submit_wrap">
 				<input type="hidden" name="rcp_register_nonce" value="<?php echo wp_create_nonce('rcp-register-nonce' ); ?>"/>
 				<input type="submit" name="rcp_submit_registration" id="rcp_submit" value="<?php esc_attr_e( apply_filters ( 'rcp_registration_register_button', __( 'Register', 'rcp' ) ) ); ?>"/>
 			</div>
 		</div>
-
-<!--		--><?php //do_action( 'rcp_after_register_form_fields', $levels ); ?>
-
 		<div class="rcp_gateway_fields">
 			<?php
 			$gateways = rcp_get_enabled_payment_gateways();

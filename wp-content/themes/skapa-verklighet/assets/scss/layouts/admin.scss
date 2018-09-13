@@ -300,6 +300,22 @@
   }
 }
 
+.rcp_registration_total_details{
+  width: 100%;
+  padding: 11px 0 10px;
+  border-top: 1px solid #e6e6e6;
+  display: flex;
+
+  tbody{
+    width: 100%;
+  }
+
+  tr{
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
 .cd-register-about{
   border-radius: 5px;
   margin: 24px 0;
