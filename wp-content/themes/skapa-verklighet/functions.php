@@ -147,7 +147,7 @@ function cone_enqueue_scripts() {
     wp_enqueue_script( 'swiper-scripts', get_template_directory_uri() . '/assets/js/lib/swiper.min.js', array('jquery'), 1.0, true );
 
     // vendor.css created with gulp
-    wp_enqueue_style( 'main-min-style', get_template_directory_uri() . '/assets/css/main.min.css' );
+    wp_enqueue_style( 'main-min-style', get_template_directory_uri() . '/assets/css/main.min.css', array(), 1.1 );
 
     // vendor.js created with gulp
     wp_enqueue_script( 'main-min-scripts', get_template_directory_uri() . '/assets/js/src/main.min.js', array('jquery'), 1.0, true );
