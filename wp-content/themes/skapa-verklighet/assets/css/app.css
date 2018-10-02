@@ -473,7 +473,8 @@ a {
   left: 0; }
 
 .background-img {
-  background-size: cover;
+  -webkit-background-size: cover;
+          background-size: cover;
   background-position: center;
   background-repeat: no-repeat; }
 
@@ -491,6 +492,7 @@ a {
   text-align: center;
   -webkit-transition: -webkit-box-shadow 0.2s ease-in-out;
   transition: -webkit-box-shadow 0.2s ease-in-out;
+  -o-transition: box-shadow 0.2s ease-in-out;
   transition: box-shadow 0.2s ease-in-out;
   transition: box-shadow 0.2s ease-in-out, -webkit-box-shadow 0.2s ease-in-out; }
   .color-button:hover {
@@ -538,6 +540,7 @@ a {
   -webkit-border-radius: 100px;
           border-radius: 100px;
   -webkit-transition: 0.2s ease-in-out;
+  -o-transition: 0.2s ease-in-out;
   transition: 0.2s ease-in-out; }
   .border-link:hover {
     background: #E6295E;
@@ -593,6 +596,7 @@ a {
     color: #9B9B9B;
     cursor: pointer;
     -webkit-transition: color 0.2s ease-in-out;
+    -o-transition: color 0.2s ease-in-out;
     transition: color 0.2s ease-in-out; }
     @media (max-width: 800px) {
       .modal-content i {
@@ -729,6 +733,7 @@ a {
     border: 0;
     -webkit-transition: -webkit-box-shadow 0.2s ease-in-out;
     transition: -webkit-box-shadow 0.2s ease-in-out;
+    -o-transition: box-shadow 0.2s ease-in-out;
     transition: box-shadow 0.2s ease-in-out;
     transition: box-shadow 0.2s ease-in-out, -webkit-box-shadow 0.2s ease-in-out;
     margin-top: 14px; }
@@ -762,6 +767,7 @@ a {
       -ms-flex-pack: center;
           justify-content: center;
   -webkit-transition: opacity 0.3s ease-in-out;
+  -o-transition: opacity 0.3s ease-in-out;
   transition: opacity 0.3s ease-in-out; }
   #exitpopup_bg i {
     position: fixed;
@@ -853,6 +859,7 @@ header {
       text-decoration: none;
       padding: 10px 20px;
       -webkit-transition: 0.2s ease-in-out;
+      -o-transition: 0.2s ease-in-out;
       transition: 0.2s ease-in-out;
       font-weight: bold;
       border: none; }
@@ -921,9 +928,11 @@ header {
   opacity: 1;
   color: rgba(76, 193, 252, 0.5);
   -webkit-transition: opacity 0.2s ease-in-out;
+  -o-transition: opacity 0.2s ease-in-out;
   transition: opacity 0.2s ease-in-out;
   background: -webkit-linear-gradient(left, #66c0df, #de638a);
   background: -webkit-gradient(linear, left top, right top, from(#66c0df), to(#de638a));
+  background: -o-linear-gradient(left, #66c0df, #de638a);
   background: linear-gradient(to right, #66c0df, #de638a);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent; }
@@ -944,6 +953,7 @@ header {
   height: 100vh;
   background: -webkit-gradient(linear, left top, right top, from(#66c0df), to(#de638a));
   background: -webkit-linear-gradient(left, #66c0df, #de638a);
+  background: -o-linear-gradient(left, #66c0df, #de638a);
   background: linear-gradient(to right, #66c0df, #de638a);
   z-index: 50;
   display: none;
@@ -978,6 +988,7 @@ header {
     cursor: pointer;
     font-size: 30px;
     -webkit-transition: opacity 0.2s ease-in-out;
+    -o-transition: opacity 0.2s ease-in-out;
     transition: opacity 0.2s ease-in-out;
     opacity: 1; }
     .mobile-menu i:hover {
@@ -2044,6 +2055,7 @@ footer {
     right: 10px;
     opacity: 0.4;
     -webkit-transition: 0.2s ease-in-out;
+    -o-transition: 0.2s ease-in-out;
     transition: 0.2s ease-in-out;
     cursor: pointer; }
     .cd-free-episode-modal i:hover {
@@ -2156,6 +2168,7 @@ footer {
     font-size: 16px;
     line-height: 19px;
     -webkit-transition: color 0.2s ease-in-out;
+    -o-transition: color 0.2s ease-in-out;
     transition: color 0.2s ease-in-out; }
   .list-grid i {
     color: #21CCB9;
@@ -2245,6 +2258,7 @@ footer {
     text-align: center;
     -webkit-transition: -webkit-box-shadow 0.2s ease-in-out;
     transition: -webkit-box-shadow 0.2s ease-in-out;
+    -o-transition: box-shadow 0.2s ease-in-out;
     transition: box-shadow 0.2s ease-in-out;
     transition: box-shadow 0.2s ease-in-out, -webkit-box-shadow 0.2s ease-in-out;
     border: none;
@@ -2336,14 +2350,12 @@ footer {
       .cd-register-form .cd-register-discount #rcp_discount_code_wrap input {
         padding-right: 70px; }
 
+.rcp_registration_total {
+  padding: 11px 0 10px; }
+
 .rcp_registration_total_details {
   width: 100%;
-  padding: 11px 0 10px;
-  border-top: 1px solid #e6e6e6;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex; }
+  border-top: 1px solid #e6e6e6; }
   .rcp_registration_total_details tbody {
     width: 100%; }
   .rcp_registration_total_details tr {
@@ -2412,6 +2424,7 @@ footer {
   z-index: 9;
   cursor: pointer;
   -webkit-transition: all 0.2s linear;
+  -o-transition: all 0.2s linear;
   transition: all 0.2s linear;
   color: #000000; }
 
@@ -2430,6 +2443,7 @@ footer {
   left: 0;
   z-index: 5;
   -webkit-transition: border .2s linear;
+  -o-transition: border .2s linear;
   transition: border .2s linear; }
 
 .rcp_subscription_fieldset ul li .check::before {
@@ -2444,6 +2458,7 @@ footer {
   left: 5px;
   margin: auto;
   -webkit-transition: background 0.2s linear;
+  -o-transition: background 0.2s linear;
   transition: background 0.2s linear; }
 
 .rcp_subscription_fieldset input[type=radio]:checked ~ .check {

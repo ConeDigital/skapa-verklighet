@@ -156,3 +156,39 @@ add_action( 'wp_enqueue_scripts', 'cone_enqueue_scripts' );
 
 // Custom template tags
 require get_template_directory() . '/inc/template-tags.php';
+
+
+
+/**
+ * Upgrade member to package subscription if member already has one of the two existing packeges 
+ * 
+ * @param RCP_Member $member 
+ * 
+ * @return void
+ */
+function ag_rcp_after_registration( $member ) {
+
+    // Array of level IDs we want to execute code for.
+    $subscription_levels_to_check = array( 6, 5 );
+
+    //Get current subscription plan
+    $currentSub = get_user_meta($member->ID, 'cone_current_subscription', true);
+    //If member has a plan
+    if ( $currentSub ) {
+        $update = $currentSub;
+        //And member is buying an existing plan
+        if ( in_array( $member->get_subscription_id(), $subscription_levels_to_check ) ) {
+            //Update member to package subscription
+            $member->set_subscription_id( 7 );
+            //Set current subscription to package
+            $update = 7;
+        }
+        //Update the current subscription field in DB
+        update_user_meta($member->ID,  'cone_current_subscription', $update);
+    //Otherwise its members first course
+    }else{
+        //So add user meta with purchased course
+        add_user_meta($member->ID,  'cone_current_subscription', $member->get_subscription_id(), true);
+    }
+}
+add_action( 'rcp_successful_registration', 'ag_rcp_after_registration' );
