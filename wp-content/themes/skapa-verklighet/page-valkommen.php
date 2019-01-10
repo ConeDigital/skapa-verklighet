@@ -58,4 +58,23 @@
 
 <?php endif; ?>
 
+<?php 
+    
+    //var_dump( count(rcp_get_members()));
+    //var_dump( rcp_get_members_of_subscription(6) );
+
+    // $sub = 7;
+    // $users = rcp_get_members_of_subscription($sub);
+
+    // foreach ($users as $user_id) {
+    //     if ( get_user_meta($user_id, 'rcp_status', true) != 'cancelled' ) {
+    //         $currentSub = get_user_meta($user_id, 'rcp_subscription_level', true);
+
+    //         add_user_meta( $user_id, 'cone_current_subscription', $currentSub, true );
+    //     }
+    // }
+
+
+?>
+
 <?php get_footer() ; ?>

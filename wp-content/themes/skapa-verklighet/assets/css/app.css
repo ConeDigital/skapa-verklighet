@@ -2352,14 +2352,12 @@ footer {
       .cd-register-form .cd-register-discount #rcp_discount_code_wrap input {
         padding-right: 70px; }
 
+.rcp_registration_total {
+  padding: 11px 0 10px; }
+
 .rcp_registration_total_details {
   width: 100%;
-  padding: 11px 0 10px;
-  border-top: 1px solid #e6e6e6;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex; }
+  border-top: 1px solid #e6e6e6; }
   .rcp_registration_total_details tbody {
     width: 100%; }
   .rcp_registration_total_details tr {
