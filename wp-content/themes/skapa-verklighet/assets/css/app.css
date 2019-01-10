@@ -1257,7 +1257,7 @@ footer {
     text-transform: uppercase; }
 
 .cd-home-courses-card-disabled .background-overlay {
-  background: rgba(255, 255, 255, 0.9); }
+  background: rgba(255, 255, 255, 0.9) !important; }
 
 .cd-home-courses-card-disabled a {
   background-color: #9E9E9E; }
@@ -1691,9 +1691,25 @@ footer {
       font-size: 14px; } }
 
 .cd-welcome-courses {
-  padding: 130px 0; }
+  padding: 115px 0; }
   .cd-welcome-courses h3 {
     text-align: left; }
+
+.cd-back-to-home-link {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-decoration: none;
+  margin-bottom: 25px; }
+  .cd-back-to-home-link i {
+    font-size: 18px;
+    text-decoration: none;
+    margin-right: 5px; }
 
 /*------------------ ABOUT SECTION  ---------------------*/
 .about-halfs {

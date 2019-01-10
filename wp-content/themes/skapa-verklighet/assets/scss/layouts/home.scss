@@ -231,7 +231,7 @@
 .cd-home-courses-card-disabled{
 
   .background-overlay{
-    background: rgba(255,255,255,0.9);
+    background: rgba(255,255,255,0.9) !important;
   }
 
   a{
@@ -662,12 +662,27 @@
 
 
 .cd-welcome-courses{
-  padding: 130px 0;
+  padding: 115px 0;
 
   h3{
     text-align: left;
   }
 }
+
+.cd-back-to-home-link{
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  margin-bottom: 25px;
+
+  i{
+    font-size: 18px;
+    text-decoration: none;
+    margin-right: 5px;
+  }
+}
+
+
 /*------------------ ABOUT SECTION  ---------------------*/
 
 .about-halfs{
